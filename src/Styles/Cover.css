@@ -25,3 +25,21 @@
     color: white;
     font-size: 32px;
 }
+
+h1 > span{
+    display: block;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 28ch;
+
+    animation: typing 3s steps(14),
+    blink .5s infinite step-end alternate;
+    overflow: hidden
+}
+
+@keyframes typing {
+    from { width: 0;}
+}
+@keyframes blink{
+    50% {border-color: transparent;}
+}

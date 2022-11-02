@@ -6,7 +6,8 @@ const Cover = () => {
   return (
     <div className="cover-container">
       <video className="video" src={covervideo} autoPlay loop muted />
-      <h1>Manuel A.Cebreiro Ruiz de Cortázar</h1>
+      <p>I´m</p>
+      <h1><span>Manuel A.Cebreiro Ruiz de Cortázar</span></h1>
       <p>Developer Full Stack </p>
     </div>
   )
