@@ -1,9 +1,30 @@
 *{
   margin: 0;
+  height: auto;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
 .App{
   height: 150vh;
+  
+}
+
+/* ========= MEDIA QUERIES (MEDIUM) ==========  */
+
+@media screen and (max-width: 1024px){
+  .portfolio-container{
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+}
+
+/* ========= MEDIA QUERIES (SMALL)========== */
+
+
+@media screen and (max-width: 600px){
+  .portfolio-container{
+  grid-template-columns: 1fr;
+  gap: 1rem;
+} 
 }

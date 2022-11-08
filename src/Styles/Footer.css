@@ -1,0 +1,27 @@
+.footer-section {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border:none;
+    background: black;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    height: auto;
+    align-items: center;
+}
+.footer-section > div >p{
+    margin-top: 1%;
+    margin-bottom: 0;
+    font-family: "Roboto", sans-serif;
+
+}
+.footer-section > a{
+    text-decoration: none;
+    color: white;
+
+}
+.footer-section > a:hover{
+    text-decoration: none;
+    color: #DD2476 ;
+
+}
