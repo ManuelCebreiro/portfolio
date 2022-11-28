@@ -44,7 +44,7 @@ h1>span {
     animation: typing 3s steps(14),
     blink .5s infinite step-end alternate;
     overflow: hidden;
-    font-size: 5vw;
+    font-size: 6vw;
     font-weight: 800;
 
 }

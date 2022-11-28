@@ -3,53 +3,107 @@
     background-color: #EEEEEE;
     color: black;
     height: auto;
-    padding: 5% 16% 5% 16%;
-}
-
-.about-description {
+    padding: 5% 15% 5% 15%;
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    justify-content: center;
-    width: 55%;
-    padding: 0 10% 0 10%;
+    align-items: center;
 }
 
-.about-description>h3 {
-    margin-bottom: 30px;
-    font-size: 28px;
 
-}
-
-.about-description>p {
-    line-height: 1.5;
-}
-
-.about-img {
-    max-width: 50%;
-    height: 100%;
-    margin: auto;
-    /* margin-left: 20%;
-    margin-right: 20%; */
-    /* display: flex;
-    justify-content: center;
-    overflow: hidden; */
-}
-@media(min-width:992px),(max-width:1200px) {
-    .about-img {
-        max-width: 76%;
-        height: 100%;
-        margin: auto;
-    }
+@media screen and (min-width:1600px) {
     .about-container {
         display: flex;
         background-color: #EEEEEE;
         color: black;
         height: auto;
-        padding: 5% 3% 5% 3%;
+        padding: 5% 9% 5% 9%;
     }
-    
+
+    .estilocss {
+        border-radius: 34px;
+        background: #e0e0e0;
+        box-shadow: 10px 10px 22px #808080,
+            -10px -10px 22px #ffffff;
+        padding: 4%;
+        margin-right: 10px;
+        width: 640px;
+        height: 700px;
+    }
+
+    .about-img {
+        width: auto;
+        height: auto;
+        margin: auto;
+        margin-left: 20%;
+        margin-right: 20%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .estiloContenedorImg {
+        background-color: #FFF;
+        border: 3px solid black;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 10px;
+        width: 640px;
+        height: 700px;
+    }
+
+
+    /* =================================PARA CONTACTO DEBAJO DE IMAGEN ================ */
+    :root {
+        --gradiente: linear-gradient(to left top, #23a6d5 10%, #23d5ab 90%) !important;
+    }
+
+    .cajaRedes {
+        border: 5px solid black;
+        border-bottom: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        width: 634px;
+        height: 70px;
+        color: white;
+        background: var(--gradiente) !important;
+        text-decoration: none;
+        transition: all .4s ease;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 10px 10px 10px 10px;
+    }
+
+    .cajaRedes>a {
+        text-decoration: none;
+        color: #FFF;
+    }
+
+
+    /* ========ESTILOS TEXTO=========== */
+    .card-title {
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 1000;
+    }
+
+    .card-text {
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 26px;
+    }
+
+    #estiloAnchor {
+        text-decoration: none;
+        color: rgb(99, 176, 248);
+    }
 }
-@media(min-width:1201px){
+
+
+@media screen and (min-width:1448px) and (max-width:1599px) {
     .about-container {
         display: flex;
         background-color: #EEEEEE;
@@ -57,42 +111,462 @@
         height: auto;
         padding: 5% 12% 5% 12%;
     }
-    .estilocss > p{
-        font-family: 'Caveat', cursive;
-        font-size: 28px
-        
+
+    .estilocss {
+        border-radius: 34px;
+        background: #e0e0e0;
+        box-shadow: 10px 10px 22px #808080,
+            -10px -10px 22px #ffffff;
+        padding: 4%;
+        margin-right: 10px;
+        width: 540px;
+        height: 580px;
     }
-    
-}
-@media(min-width: 1500px),(max-width:1990px){
-    .estilocss > p{
-        font-family: 'Caveat', cursive;
-        font-size: 28px
 
+    .about-img {
+        width: auto;
+        height: auto;
+        margin: auto;
+        margin-left: 20%;
+        margin-right: 20%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .estiloContenedorImg {
+        background-color: #FFF;
+        border: 3px solid black;
+        border-radius: 14px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 10px;
+        width: 540px;
+        height: 580px;
+    }
+
+
+    /* =================================PARA CONTACTO DEBAJO DE IMAGEN ================ */
+    :root {
+        --gradiente: linear-gradient(to left top, #23a6d5 10%, #23d5ab 90%) !important;
+    }
+
+    .cajaRedes {
+        border: 5px solid black;
+        border-bottom: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        width: 535px;
+        height: 70px;
+        color: white;
+        background: var(--gradiente) !important;
+        text-decoration: none;
+        transition: all .4s ease;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 10px 10px 10px 10px;
+    }
+
+    .cajaRedes>a {
+        text-decoration: none;
+        color: #FFF;
+    }
+
+
+    /* ========ESTILOS TEXTO=========== */
+
+    .card-title {
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 1000;
+    }
+
+    .card-text {
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 21px;
+    }
+
+    #estiloAnchor {
+        text-decoration: none;
+        color: rgb(99, 176, 248);
     }
 }
 
-.estilocss {
-    border-radius: 34px;
-    background: #e0e0e0;
-    box-shadow: 10px 10px 22px #808080,
-    -10px -10px 22px #ffffff;
-    padding: 5%;
+@media screen and (min-width:1196px) and (max-width:1447px) {
+    .about-container {
+        display: flex;
+        background-color: #EEEEEE;
+        color: black;
+        height: auto;
+        padding: 5% 4% 5% 4%;
+    }
 
-    
-}
-/* .estilocss > p{
-    font-family: 'Caveat', cursive;
-    font-size: 22px
-} */
-.estilocss > h3{
-    font-family: 'Caveat', cursive;
-    font-weight: 600;
+    .estilocss {
+        border-radius: 34px;
+        background: #e0e0e0;
+        box-shadow: 10px 10px 22px #808080,
+            -10px -10px 22px #ffffff;
+        padding: 4%;
+        margin-right: 10px;
+        width: 540px;
+        height: 580px;
+    }
+
+    .about-img {
+        width: auto;
+        height: auto;
+        margin: auto;
+        margin-left: 20%;
+        margin-right: 20%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .estiloContenedorImg {
+        background-color: #FFF;
+        border: 3px solid black;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 10px;
+        width: 540px;
+        height: 580px;
+    }
+
+
+    /* =================================PARA CONTACTO DEBAJO DE IMAGEN ================ */
+    :root {
+        --gradiente: linear-gradient(to left top, #23a6d5 10%, #23d5ab 90%) !important;
+    }
+
+    .cajaRedes {
+        border: 5px solid black;
+        border-bottom: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        width: 535px;
+        height: 70px;
+        color: white;
+        background: var(--gradiente) !important;
+        text-decoration: none;
+        transition: all .4s ease;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 10px 10px 10px 10px;
+    }
+
+    .cajaRedes>a {
+        text-decoration: none;
+        color: #FFF;
+    }
+
+
+    /* ========ESTILOS TEXTO=========== */
+
+    .card-title {
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 1000;
+    }
+
+    .card-text {
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 21px;
+    }
+
+    #estiloAnchor {
+        text-decoration: none;
+        color: rgb(99, 176, 248);
+    }
 }
 
-.estilocss > p> a{
-    font-family: 'Caveat', cursive;
-    font-weight: 600;
-    text-decoration: none;
-    color: rgb(5, 177, 168);
+@media screen and (min-width:979px) and (max-width:1195px) {
+    .about-container {
+        display: flex;
+        background-color: #EEEEEE;
+        color: black;
+        height: auto;
+        padding: 5% 4% 5% 4%;
+    }
+
+    .estilocss {
+        border-radius: 34px;
+        background: #e0e0e0;
+        box-shadow: 10px 10px 22px #808080,
+            -10px -10px 22px #ffffff;
+        padding: 4%;
+        margin-right: 10px;
+        width: 440px;
+        height: 480px;
+    }
+
+    .about-img {
+        width: auto;
+        height: auto;
+        margin: auto;
+        margin-left: 20%;
+        margin-right: 20%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .estiloContenedorImg {
+        background-color: #FFF;
+        border: 3px solid black;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 10px;
+        width: 440px;
+        height: 480px;
+    }
+
+
+    /* =================================PARA CONTACTO DEBAJO DE IMAGEN ================ */
+    :root {
+        --gradiente: linear-gradient(to left top, #23a6d5 10%, #23d5ab 90%) !important;
+    }
+
+    .cajaRedes {
+        border: 5px solid black;
+        border-bottom: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        width: 435px;
+        height: 70px;
+        color: white;
+        background: var(--gradiente) !important;
+        text-decoration: none;
+        transition: all .4s ease;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 10px 10px 10px 10px;
+    }
+
+    .cajaRedes>a {
+        text-decoration: none;
+        color: #FFF;
+    }
+
+
+    /* ========ESTILOS TEXTO=========== */
+
+    .card-title {
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 1000;
+        font-size: 20px;
+    }
+
+    .card-text {
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 18px;
+    }
+
+    #estiloAnchor {
+        text-decoration: none;
+        color: rgb(99, 176, 248);
+    }
+}
+
+@media screen and (min-width:500px) and (max-width:978px) {
+    .about-container {
+        display: flex;
+        background-color: #EEEEEE;
+        color: black;
+        height: auto;
+        padding: 5% 4% 5% 4%;
+    }
+
+    .estilocss {
+        border-radius: 34px;
+        background: #e0e0e0;
+        box-shadow: 10px 10px 22px #808080,
+            -10px -10px 22px #ffffff;
+        padding: 4%;
+        margin-bottom: 15px;
+        margin-right: 10px;
+        width: 440px;
+        height: 480px;
+    }
+
+    .about-img {
+        width: auto;
+        height: auto;
+        margin: auto;
+        margin-left: 20%;
+        margin-right: 20%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .estiloContenedorImg {
+        background-color: #FFF;
+        border: 3px solid black;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+        margin-left: 10px;
+        width: 440px;
+        height: 480px;
+    }
+
+
+    /* =================================PARA CONTACTO DEBAJO DE IMAGEN ================ */
+    :root {
+        --gradiente: linear-gradient(to left top, #23a6d5 10%, #23d5ab 90%) !important;
+    }
+
+    .cajaRedes {
+        border: 5px solid black;
+        border-bottom: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        width: 435px;
+        height: 70px;
+        color: white;
+        background: var(--gradiente) !important;
+        text-decoration: none;
+        transition: all .4s ease;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 10px 10px 10px 10px;
+    }
+
+    .cajaRedes>a {
+        text-decoration: none;
+        color: #FFF;
+    }
+
+
+    /* ========ESTILOS TEXTO=========== */
+
+    .card-title {
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 1000;
+        font-size: 20px;
+    }
+
+    .card-text {
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 18px;
+    }
+
+    #estiloAnchor {
+        text-decoration: none;
+        color: rgb(99, 176, 248);
+    }
+}
+
+@media screen and (max-width:499px) {
+    .about-container {
+        display: flex;
+        background-color: #EEEEEE;
+        color: black;
+        height: auto;
+        padding: 5% 4% 5% 4%;
+    }
+
+    .estilocss {
+        border-radius: 34px;
+        background: #e0e0e0;
+        box-shadow: 10px 10px 22px #808080,
+            -10px -10px 22px #ffffff;
+        padding: 4%;
+        margin-bottom: 15px;
+        margin-right: 10px;
+        width: 260px;
+        height: 480px;
+    }
+
+    .about-img {
+        width: auto;
+        height: auto;
+        margin: auto;
+        margin-left: 20%;
+        margin-right: 20%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .estiloContenedorImg {
+        background-color: #FFF;
+        border: 3px solid black;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+        margin-left: 10px;
+        width: 260px;
+        height: 480px;
+    }
+
+
+    /* =================================PARA CONTACTO DEBAJO DE IMAGEN ================ */
+    :root {
+        --gradiente: linear-gradient(to left top, #23a6d5 10%, #23d5ab 90%) !important;
+    }
+
+    .cajaRedes {
+        border: 5px solid black;
+        border-bottom: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        width: 256px;
+        height: 70px;
+        color: white;
+        background: var(--gradiente) !important;
+        text-decoration: none;
+        transition: all .4s ease;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 10px 10px 10px 10px;
+    }
+
+    .cajaRedes>a {
+        text-decoration: none;
+        color: #FFF;
+    }
+
+
+    /* ========ESTILOS TEXTO=========== */
+
+    .card-title {
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 1000;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .card-text {
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 14px;
+    }
+
+    #estiloAnchor {
+        text-decoration: none;
+        color: rgb(99, 176, 248);
+    }
 }

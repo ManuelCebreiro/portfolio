@@ -1,10 +1,10 @@
 import React from 'react'
 import "../Styles/Contacto.css"
 
-const Contacto = () => {
+const Contacto = ({ContactoSection}) => {
     return (
-        <div className='contacto-container'>
-            <h2 className='head-text mb-5 t'>Descargar CV</h2>
+        <div className='contacto-container' ref={ContactoSection}>
+            <h2 className='head-text mb-5 t'>Contacto</h2>
             <div className='text-center'>
 
 

@@ -1,0 +1,18 @@
+.contenedor{
+    background-color: #EEEEEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 640px;
+    height: 440px;
+    background-color: black;
+    margin: 5%;
+    color: white
+}
