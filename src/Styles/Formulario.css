@@ -3,16 +3,68 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 500px;
 }
 
 .formulario{
     display: flex;
-    justify-content: center;
+    justify-content:center;
     flex-direction: column;
     align-items: center;
-    width: 640px;
-    height: 440px;
+    width: 50%;
+    height: 60%;
     background-color: black;
     margin: 5%;
     color: white
 }
+@media (max-width: 768px) {
+  .formulario{
+    width: 90%;
+    height: 60%;
+  }
+}
+.contenido{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+}
+.inputstyle{
+    width: 100%;
+    font-size: 20px;
+}
+.textareastyle{
+    font-size: 20px;
+    height: 150px;
+}
+.btnenviar{
+        border: 5px solid black;
+        border-image-slice: 1;
+        color: white;
+        background: var(--gradient) !important;
+        margin: auto;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all .4s ease;
+        text-align: center;
+        font-size: 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 50px;
+
+    }
+
+    .btnenviar:hover,
+    .btnenviar:focus {
+        background: var(--gradient) !important;
+        -webkit-text-fill-color: #fff !important;
+        border: 5px solid #fff !important;
+        box-shadow: #222 1px 0 10px;
+        text-decoration: none;
+        transform: scale(1.2);
+    }
