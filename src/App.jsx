@@ -53,7 +53,6 @@ function App() {
       <Contacto
       ContactoSection={ContactoSection}
       />
-      <Formulario/>
       <Footer/>
 
     </div>

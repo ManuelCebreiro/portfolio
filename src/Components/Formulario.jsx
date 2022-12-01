@@ -1,9 +1,10 @@
 import React from 'react'
 import "../Styles/Formulario.css"
 
-const Formulario = () => {
+const Formulario = ({ContactoSection}) => {
     return (
-        <div className='contenedor'>
+        <div className='contenedor' ref={ContactoSection} >
+            <h2 className='head-text'>Contacto</h2>
             <div className='formulario'>
                 <div className='contenido'>
                 <input className='inputstyle' type="text" name='name' placeholder='Nombre'></input>

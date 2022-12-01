@@ -1,70 +1,100 @@
-.contenedor{
+.contenedor {
     background-color: #EEEEEE;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 500px;
 }
 
-.formulario{
+.formulario {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     width: 50%;
-    height: 60%;
-    background-color: black;
-    margin: 5%;
-    color: white
+    height: 66%;
+    background-color: #adadad;
+    border: 2px solid #000;
+    box-shadow: 3px 5px 5px black;
+    margin-top: 1%;
 }
+
 @media (max-width: 768px) {
-  .formulario{
-    width: 90%;
-    height: 60%;
-  }
+    .formulario {
+        width: 90%;
+        height: 64%;
+    }
 }
-.contenido{
+
+.contenido {
     display: flex;
     justify-content: center;
     flex-direction: column;
     width: 90%;
+    padding: 3%;
 }
-.inputstyle{
+
+.inputstyle {
     width: 100%;
     font-size: 20px;
+    border-bottom: 2px solid #000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: black;
+    background-color: transparent;
+    margin: 4px 0px 4px 0px;
 }
-.textareastyle{
+
+.inputstyle::placeholder {
+    color: black;
+    border: none;
+}
+
+.textareastyle {
     font-size: 20px;
     height: 150px;
+    padding: 6px;
+    border: 2px solid #000;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+    margin-top: 2%;
 }
-.btnenviar{
-        border: 5px solid black;
-        border-image-slice: 1;
-        color: white;
-        background: var(--gradient) !important;
-        margin: auto;
-        margin-top: 1%;
-        margin-bottom: 1%;
-        text-decoration: none;
-        text-transform: uppercase;
-        transition: all .4s ease;
-        text-align: center;
-        font-size: 18px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 150px;
-        height: 50px;
 
-    }
+.textareastyle::placeholder {
+    color: #000;
+}
 
-    .btnenviar:hover,
-    .btnenviar:focus {
-        background: var(--gradient) !important;
-        -webkit-text-fill-color: #fff !important;
-        border: 5px solid #fff !important;
-        box-shadow: #222 1px 0 10px;
-        text-decoration: none;
-        transform: scale(1.2);
-    }
+.btnenviar {
+    border: 5px solid black;
+    border-image-slice: 1;
+    color: white;
+    background: var(--gradient) !important;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .4s ease;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+
+}
+
+.btnenviar:hover,
+.btnenviar:focus {
+    background: var(--gradient) !important;
+    -webkit-text-fill-color: #fff !important;
+    border: 5px solid #fff !important;
+    box-shadow: #222 1px 0 10px;
+    text-decoration: none;
+    transform: scale(1.2);
+}
