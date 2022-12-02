@@ -47,7 +47,7 @@
         display: flex;
         gap: 1rem;
         margin-bottom: 5%;
-        width: 100%;
+        width: 80%;
         justify-content: center;
         align-items: center;
     }
@@ -70,7 +70,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
     }
 
     .btn:hover,
@@ -111,6 +110,20 @@
         justify-content: center;
         align-items: center;
     }
+}
+
+.btnBack {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-right: 10%;
+}
+
+.iconStyleInfo {
+    width: 50px;
+    height: 50px;
+    margin: 1%;
+    border-radius: 50%;
 }
 
 
@@ -349,7 +362,7 @@
 .portfolio-item-cta {
     display: flex;
     gap: 1rem;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     width: 100%;
 
     justify-content: center;
@@ -450,6 +463,9 @@
     border-radius: 0 0 3% 3%;
     display: flex;
     box-shadow: 5px 5px 15px gray;
+    padding-top: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -468,6 +484,9 @@
     .portfolio-item-info {
         height: 410px;
         width: 300px;
+        padding-top: 30px;
+        padding-left: 25px;
+        padding-right: 25px;
         padding-bottom: 40px;
         margin-top: 60px;
         margin-bottom: 30px;
@@ -555,6 +574,9 @@
         height: 440px;
         width: 460px;
         margin-top: 30px;
+        padding-top: 30px;
+        padding-left: 25px;
+        padding-right: 25px;
         padding-bottom: 30px;
         margin-bottom: 30px;
     }
@@ -624,6 +646,9 @@
     .portfolio-item-info {
         height: 440px;
         width: 544px;
+        padding-top: 30px;
+        padding-left: 25px;
+        padding-right: 25px;
         padding-bottom: 40px;
         margin-top: 60px;
         margin-bottom: 30px;
@@ -694,6 +719,9 @@
     .portfolio-item-info {
         height: 440px;
         width: 544px;
+        padding-top: 30px;
+        padding-left: 25px;
+        padding-right: 25px;
         padding-bottom: 40px;
         margin-top: 40px;
         margin-bottom: 50px;
@@ -782,11 +810,15 @@
 .portfolio-item-cta {
     display: flex;
     gap: 1rem;
-    margin-bottom: 10%;
-    width: 100%;
-
+    margin-bottom: auto;
+    width: 80%;
     justify-content: center;
     align-items: center;
+}
+
+.titlestyle {
+    margin-top: auto;
+    margin-bottom: 1rem;
 }
 
 .portfolio-img {

@@ -17,6 +17,7 @@ import iconoNode from "../Media/node.png"
 import iconoFlask from "../Media/flask.png"
 import iconoSql from "../Media/SQLAlchemy.png"
 import iconoJest from "../Media/jest.png"
+import tailwind from "../Media/tailwindlogo.svg"
 
 
 
@@ -31,7 +32,7 @@ const Projects = ({ ProyectosSection }) => {
             demo: "",
             inf: false,
             tecnologias: [iconoJs, iconoCss, iconoHtml, iconoReact, iconoBoostrap],
-            descripciondetallada: "En este proyecto he utilizado bootstrap para aplicar estilos, y react para las funcionalidades. Consiste en utilizar los datos de la API SWAPI para extrar toda la información requerida y utilzarla en la aplicación web."
+            descripciondetallada: "En este proyecto he utilizado bootstrap para aplicar estilos, y react para las funcionalidades. Consiste en utilizar los datos de la API SWAPI para extraer toda la información requerida y utilizarla en la aplicación web."
         },
         {
             id: 1,
@@ -41,8 +42,8 @@ const Projects = ({ ProyectosSection }) => {
             github: "https://github.com/ManuelCebreiro/SporterTeam",
             demo: "https://sporterteam.herokuapp.com/",
             inf: false,
-            tecnologias: [iconoJs, iconoCss, iconoHtml, iconoReact, iconoBoostrap],
-            descripciondetallada: "En este proyecto he utilizado bootstrap para aplicar estilos, y react para las funcionalidades. Consiste en utilizar los datos de la API SWAPI para extrar toda la información requerida y utilzarla en la aplicación web."
+            tecnologias: [iconoHtml, iconoCss, iconoBoostrap, iconoJs, iconoReact, iconoPython, iconoNode, iconoFlask, iconoSql, iconoGit],
+            descripciondetallada: "Proyecto realizado en equipo, donde logramos conectar a personas con eventos deportivos, donde cada evento tiene un administrador, el credor del evento, que sería el que elige si acepta o no las peticiones de los jugadores para participar en el evento. Utilizamos cloudinary para guardar las imagenes de perfil de los usuarios. Autenticación de usuarios con JWT(Flask). La base de datos está desarrollada con (AlchemySQL) usando Pyhton."
         },
         {
             id: 2,
@@ -52,8 +53,8 @@ const Projects = ({ ProyectosSection }) => {
             github: "https://github.com/ManuelCebreiro/citas_veterinario_react",
             demo: "",
             inf: false,
-            tecnologias: [iconoJs, iconoCss, iconoHtml, iconoReact, iconoBoostrap],
-            descripciondetallada: "En este proyecto he utilizado bootstrap para aplicar estilos, y react para las funcionalidades. Consiste en utilizar los datos de la API SWAPI para extrar toda la información requerida y utilzarla en la aplicación web."
+            tecnologias: [iconoJs, iconoCss, iconoHtml, iconoReact, iconoBoostrap, tailwind],
+            descripciondetallada: "La interfaz esta diseñada con TailwindCSS, y también use ReactJS, la aplicación, guarda los datos en LocalStorage, y puede editar pacientes, eliminar y agregar nuevos."
         },
         {
             id: 3,
@@ -97,11 +98,6 @@ const Projects = ({ ProyectosSection }) => {
         const dataActualizada = data.map(proyect => proyect.id === proyecto.id ? proyecto : proyect)
         setData(dataActualizada)
     }
-
-    // const arrayTecnologias = async (proyecto) => {
-    //     const datatecnologias = data.map(proyecto => proyect.id === proyecto.id ? proyecto.descripciondetallada : proyect)
-    //     setData(datatecnologias)
-    // }
     const generarId = () => {
         const random = Math.random().toString(36).substring(2);
         const fecha = Date.now().toString(36)
@@ -121,21 +117,21 @@ const Projects = ({ ProyectosSection }) => {
                             {inf
                                 ?
                                 <article key={idgenerate} className='portfolio-item-info'>
-                                    <h5 className='px-3 py-3 text-center'><strong>{title}</strong></h5>
-                                    <p className='px-3 pb-3'>{descripciondetallada}</p>
-                                    <p>Tecnologías</p>
+                                    {/* <h5 className='px-3 py-3 text-center'><strong>{title}</strong></h5> */}
+                                    <p className='px-3 pt-3'>{descripciondetallada}</p>
+                                    <p className='titlestyle'>Tecnologías usadas:</p>
                                     <div className='portfolio-item-cta'>
-                                        <div className='iconLike'>
+                                        <div className='d-flex flex-wrap justify-content-center'>
                                             {tecnologias.map((img) => {
                                                 const idgenerate = generarId()
                                                 return (
-                                                    <img key={idgenerate} className='iconStyle' src={img} alt="iconotecnologias" />
+                                                    <img key={idgenerate} className='iconStyleInfo' src={img} alt="iconotecnologias" />
                                                 )
                                             })
                                             }
                                         </div>
                                     </div>
-                                    <div>
+                                    <div className='btnBack'>
                                         <button
                                             style={{ border: 'none' }}
                                             onClick={() => {
