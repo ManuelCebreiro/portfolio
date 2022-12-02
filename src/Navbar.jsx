@@ -7,7 +7,7 @@ const Navbar = ({ scrollHeight, scrollDown, ContactoSection, ProyectosSection, A
     //     window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); {/* behavior: "smooth" es el estilo de transicion */ }
     // }
 
-    console.log(scrollHeight)
+    // console.log(scrollHeight)
 
     return (
         <nav className={`navbar ${scrollHeight > 780
@@ -23,18 +23,19 @@ const Navbar = ({ scrollHeight, scrollDown, ContactoSection, ProyectosSection, A
                 Manuel Cebreiro
             </div>
             <div className='estilonavbar'>
-                <div className='navbar-logo me-3'
+                <div className='navbar-logo-right me-3'
                     onClick={() => {
                         scrollDown(ProyectosSection);
                     }}>
                     Proyectos
                 </div>
-                <div className='navbar-logo'
+                <div className='navbar-logo-right'
                     onClick={() => {
                         scrollDown(ContactoSection);
                     }}>
                     Contacto
                 </div>
+
             </div>
 
         </nav>

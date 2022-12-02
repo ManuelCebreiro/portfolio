@@ -96,15 +96,12 @@
         margin-right: 10px;
     }
 
-    .iconLike>svg:hover {
-        color: rgb(0, 153, 255);
+    .iconLike:hover {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         transform: scale(1.2);
-
-
     }
 
     .numberLikes {
@@ -168,8 +165,7 @@
         align-items: center;
     }
 
-    .iconLike>svg:hover {
-        color: rgb(0, 153, 255);
+    .iconLike:hover {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -239,8 +235,7 @@
         align-items: center;
     }
 
-    .iconLike>svg:hover {
-        color: rgb(0, 153, 255);
+    .iconLike:hover {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -312,8 +307,7 @@
         align-items: center;
     }
 
-    .iconLike>svg:hover {
-        color: rgb(0, 153, 255);
+    .iconLike:hover {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -407,8 +401,7 @@
     align-items: center;
 }
 
-.iconLike>svg:hover {
-    color: rgb(0, 153, 255);
+.iconLike:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -462,6 +455,10 @@
     align-items: center;
 }
 
+.portfolio-item:hover {
+    box-shadow: 5px 5px 15px #e6221b;
+
+}
 
 .projects-container {
     padding: 0 5% 0 5%;
@@ -533,8 +530,7 @@
         margin-right: 10px;
     }
 
-    .iconLike>svg:hover {
-        color: rgb(0, 153, 255);
+    .iconLike:hover {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -605,8 +601,7 @@
         align-items: center;
     }
 
-    .iconLike>svg:hover {
-        color: rgb(0, 153, 255);
+    .iconLike:hover {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -676,8 +671,7 @@
         align-items: center;
     }
 
-    .iconLike>svg:hover {
-        color: rgb(0, 153, 255);
+    .iconLike:hover {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -752,8 +746,7 @@
         align-items: center;
     }
 
-    .iconLike>svg:hover {
-        color: rgb(0, 153, 255);
+    .iconLike:hover {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -772,12 +765,6 @@
     }
 }
 
-/* .portfolio-item:hover {
-    border-color: rgb(1, 36, 65);
-    background: #80bdd3;
-    opacity: 1;
-    color: white;
-} */
 
 .portfolio-item-img {
     overflow: hidden;
@@ -847,8 +834,7 @@
     align-items: center;
 }
 
-.iconLike>svg:hover {
-    color: rgb(0, 153, 255);
+.iconLike:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;

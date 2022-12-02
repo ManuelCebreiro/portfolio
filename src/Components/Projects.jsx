@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import "../Styles/Projects.css"
 import StarWarsImg from "../Media/starwars.png"
 import SporterImg from "../Media/Sporter.png"
@@ -9,10 +9,18 @@ import CotizadorCrypto from "../Media/CotizadorCriptomonedas.png"
 import iconoJs from "../Media/javascript.png"
 import iconoCss from "../Media/css.png"
 import iconoHtml from "../Media/html.png"
+import iconoPython from "../Media/python.png"
+import iconoReact from "../Media/react.png"
+import iconoGit from "../Media/git.png"
+import iconoBoostrap from "../Media/bootstrap.png"
+import iconoNode from "../Media/node.png"
+import iconoFlask from "../Media/flask.png"
+import iconoSql from "../Media/SQLAlchemy.png"
+import iconoJest from "../Media/jest.png"
 
 
 
-const Projects = ({ProyectosSection}) => {
+const Projects = ({ ProyectosSection }) => {
     const [data, setData] = useState([
         {
             id: 0,
@@ -21,7 +29,9 @@ const Projects = ({ProyectosSection}) => {
             descripcion: "Proyecto realizado con API SWAPI. Del cual obtengo y manejo los datos, con opción a guardar y eliminar elementos favoritos",
             github: "https://github.com/ManuelCebreiro/starwars",
             demo: "",
-            inf: false
+            inf: false,
+            tecnologias: [iconoJs, iconoCss, iconoHtml, iconoReact, iconoBoostrap],
+            descripciondetallada: "En este proyecto he utilizado bootstrap para aplicar estilos, y react para las funcionalidades. Consiste en utilizar los datos de la API SWAPI para extrar toda la información requerida y utilzarla en la aplicación web."
         },
         {
             id: 1,
@@ -30,7 +40,9 @@ const Projects = ({ProyectosSection}) => {
             descripcion: "Consite en una aplicación web que con una manera sencilla y eficaz permite crear y encontrar eventos deportivos.",
             github: "https://github.com/ManuelCebreiro/SporterTeam",
             demo: "https://sporterteam.herokuapp.com/",
-            inf: false
+            inf: false,
+            tecnologias: [iconoJs, iconoCss, iconoHtml, iconoReact, iconoBoostrap],
+            descripciondetallada: "En este proyecto he utilizado bootstrap para aplicar estilos, y react para las funcionalidades. Consiste en utilizar los datos de la API SWAPI para extrar toda la información requerida y utilzarla en la aplicación web."
         },
         {
             id: 2,
@@ -39,7 +51,9 @@ const Projects = ({ProyectosSection}) => {
             descripcion: "Proyecto realizado para el control de pacientes. Crear, eliminar o editar fichas de pacientes existentes.",
             github: "https://github.com/ManuelCebreiro/citas_veterinario_react",
             demo: "",
-            inf: false
+            inf: false,
+            tecnologias: [iconoJs, iconoCss, iconoHtml, iconoReact, iconoBoostrap],
+            descripciondetallada: "En este proyecto he utilizado bootstrap para aplicar estilos, y react para las funcionalidades. Consiste en utilizar los datos de la API SWAPI para extrar toda la información requerida y utilzarla en la aplicación web."
         },
         {
             id: 3,
@@ -48,7 +62,9 @@ const Projects = ({ProyectosSection}) => {
             descripcion: "Primer proyecto, donde exploré el funcionamiento de React. Permite crear informes de pacientes de una clinica veterinaria.",
             github: "https://github.com/ManuelCebreiro/veterinario",
             demo: "https://veterinario.vercel.app/",
-            inf: false
+            inf: false,
+            tecnologias: [iconoJs, iconoCss, iconoHtml, iconoReact, iconoBoostrap],
+            descripciondetallada: "En este proyecto he utilizado bootstrap para aplicar estilos, y react para las funcionalidades. Consiste en utilizar los datos de la API SWAPI para extrar toda la información requerida y utilzarla en la aplicación web."
         },
         {
             id: 4,
@@ -57,15 +73,19 @@ const Projects = ({ProyectosSection}) => {
             descripcion: "Control de gastos, reacciona a medida que aumenta los gastos, y refleja en una gráfica.",
             github: "https://github.com/ManuelCebreiro/control_gastos",
             demo: "https://dulcet-bienenstitch-654ab3.netlify.app/",
-            inf: false
-        },{
+            inf: false,
+            tecnologias: [iconoJs, iconoCss, iconoHtml, iconoReact, iconoBoostrap],
+            descripciondetallada: "En este proyecto he utilizado bootstrap para aplicar estilos, y react para las funcionalidades. Consiste en utilizar los datos de la API SWAPI para extrar toda la información requerida y utilzarla en la aplicación web."
+        }, {
             id: 5,
             image: CotizadorCrypto,
             title: "Cotizador de CryptoMonedas",
             descripcion: "Cotizador de cryptomonedas conectando a una API",
             github: "https://github.com/ManuelCebreiro/cotizador_crypto",
-            demo:"https://joyful-concha-8e6d59.netlify.app/",
-            inf: false
+            demo: "https://joyful-concha-8e6d59.netlify.app/",
+            inf: false,
+            tecnologias: [iconoJs, iconoCss, iconoHtml, iconoReact, iconoBoostrap],
+            descripciondetallada: "En este proyecto he utilizado bootstrap para aplicar estilos, y react para las funcionalidades. Consiste en utilizar los datos de la API SWAPI para extrar toda la información requerida y utilzarla en la aplicación web."
         }
     ])
 
@@ -75,41 +95,44 @@ const Projects = ({ProyectosSection}) => {
         // data[index].inf = !data[index].inf;
         proyecto.inf = !proyecto.inf
         const dataActualizada = data.map(proyect => proyect.id === proyecto.id ? proyecto : proyect)
-
         setData(dataActualizada)
     }
 
-    useEffect(() => {
-        modificar()
-    }, [info])
-
+    // const arrayTecnologias = async (proyecto) => {
+    //     const datatecnologias = data.map(proyecto => proyect.id === proyecto.id ? proyecto.descripciondetallada : proyect)
+    //     setData(datatecnologias)
+    // }
+    const generarId = () => {
+        const random = Math.random().toString(36).substring(2);
+        const fecha = Date.now().toString(36)
+        return random + fecha
+    };
 
     return (
         <section className='projects-container' ref={ProyectosSection}>
             <h2 className='head-text mb-5'>Mis proyectos</h2>
             <div class="d-flex flex-wrap justify-content-center">
-
                 {data.map((proyecto, index) => {
-                    const { id, image, title, github, demo, descripcion, inf } = proyecto
-
-                    console.log(data[index].inf)
+                    const { id, image, title, github, demo, descripcion, inf, descripciondetallada, tecnologias } = proyecto
+                    const idgenerate = generarId()
+                    // console.log(data[index].inf)
                     return (
                         <>
                             {inf
-
-
                                 ?
-                                <article key={index} className='portfolio-item-info'>
-                                    {/* <img className="portfolio-img" src={image} alt={title} /> */}
+                                <article key={idgenerate} className='portfolio-item-info'>
                                     <h5 className='px-3 py-3 text-center'><strong>{title}</strong></h5>
-                                    <p className='px-3 pb-3'>{descripcion}</p>
+                                    <p className='px-3 pb-3'>{descripciondetallada}</p>
                                     <p>Tecnologías</p>
                                     <div className='portfolio-item-cta'>
                                         <div className='iconLike'>
-                                            <img className='iconStyle' src={iconoHtml} alt="icono-js" ></img>
-                                            <img className='iconStyle' src={iconoCss} alt="icono-js" ></img>
-                                            <img className='iconStyle' src={iconoJs} alt="icono-js"></img>
-
+                                            {tecnologias.map((img) => {
+                                                const idgenerate = generarId()
+                                                return (
+                                                    <img key={idgenerate} className='iconStyle' src={img} alt="iconotecnologias" />
+                                                )
+                                            })
+                                            }
                                         </div>
                                     </div>
                                     <div>
@@ -117,10 +140,6 @@ const Projects = ({ProyectosSection}) => {
                                             style={{ border: 'none' }}
                                             onClick={() => {
                                                 modificar(proyecto)
-                                                // setInfo(false)
-                                                // setInfoIndex(index)
-                                                // console.log(index)
-
                                             }}
                                         >
                                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
@@ -132,7 +151,7 @@ const Projects = ({ProyectosSection}) => {
 
                                 </article>
                                 :
-                                <article className='portfolio-item'>
+                                <article key={idgenerate + 1} className='portfolio-item'>
                                     <img className="portfolio-img" src={image} alt={title} />
                                     <h5 className='px-3 py-3 text-center'><strong>{title}</strong></h5>
                                     <p className='px-3 pb-3'>{descripcion}</p>
@@ -149,23 +168,10 @@ const Projects = ({ProyectosSection}) => {
                                             </svg> &nbsp;
                                             Demo</a>
                                         <div className='iconLike'>
-                                            {/* <button className='iconLike'
-                                            onClick={() => {
-                                                actions.sumarLikes()
-                                            }}>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-                                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
-                                            </svg>
-                                        </button><p className="numberLikes">{store.count}</p> */}
                                             <button
                                                 style={{ border: 'none' }}
                                                 onClick={() => {
                                                     modificar(proyecto)
-                                                    // setInfo(true)
-                                                    // setInfoIndex(index)
-                                                    // console.log(index)
-
-
                                                 }}
                                             >
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-info-square-fill" viewBox="0 0 16 16">
