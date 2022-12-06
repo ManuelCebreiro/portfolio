@@ -51,7 +51,7 @@ const Projects = ({ ProyectosSection }) => {
             title: "Gestión de pacientes, clínica veterinaria",
             descripcion: "Proyecto realizado para el control de pacientes. Crear, eliminar o editar fichas de pacientes existentes.",
             github: "https://github.com/ManuelCebreiro/citas_veterinario_react",
-            demo: "",
+            demo: "https://leafy-centaur-ca7333.netlify.app/",
             inf: false,
             tecnologias: [iconoJs, iconoCss, iconoHtml, iconoReact, iconoBoostrap, tailwind],
             descripciondetallada: "La interfaz esta diseñada con TailwindCSS, y también use ReactJS, la aplicación, guarda los datos en LocalStorage, y puede editar pacientes, eliminar y agregar nuevos."
@@ -65,19 +65,20 @@ const Projects = ({ ProyectosSection }) => {
             demo: "https://veterinario.vercel.app/",
             inf: false,
             tecnologias: [iconoJs, iconoCss, iconoHtml, iconoReact, iconoBoostrap],
-            descripciondetallada: "En este proyecto he utilizado bootstrap para aplicar estilos, y react para las funcionalidades. Consiste en utilizar los datos de la API SWAPI para extrar toda la información requerida y utilzarla en la aplicación web."
+            descripciondetallada: "En este proyecto he utilizado bootstrap para aplicar estilos, y react para las funcionalidades. Es una simulación de gestión de informes de una clínica veterinaria, donde podemos crear informes."
         },
         {
             id: 4,
             image: ControlGastosImg,
             title: "Proyecto de control de gastos",
-            descripcion: "Control de gastos, reacciona a medida que aumenta los gastos, y refleja en una gráfica.",
+            descripcion: "Control de gastos, reacciona a medida que aumenta los gastos, y refleja en una gráfica los cambios.",
             github: "https://github.com/ManuelCebreiro/control_gastos",
             demo: "https://dulcet-bienenstitch-654ab3.netlify.app/",
             inf: false,
-            tecnologias: [iconoJs, iconoCss, iconoHtml, iconoReact, iconoBoostrap],
-            descripciondetallada: "En este proyecto he utilizado bootstrap para aplicar estilos, y react para las funcionalidades. Consiste en utilizar los datos de la API SWAPI para extrar toda la información requerida y utilzarla en la aplicación web."
-        }, {
+            tecnologias: [iconoJs, iconoCss, iconoHtml, iconoReact, tailwind],
+            descripciondetallada: "En este proyecto he utilizado tailwindCSS para aplicar estilos, y react para las funcionalidades. Consiste en controlar el flujo de gastos representados en una grafica, pudiendo eliminar o editar los gastos."
+        },
+        {
             id: 5,
             image: CotizadorCrypto,
             title: "Cotizador de CryptoMonedas",
@@ -85,8 +86,8 @@ const Projects = ({ ProyectosSection }) => {
             github: "https://github.com/ManuelCebreiro/cotizador_crypto",
             demo: "https://joyful-concha-8e6d59.netlify.app/",
             inf: false,
-            tecnologias: [iconoJs, iconoCss, iconoHtml, iconoReact, iconoBoostrap],
-            descripciondetallada: "En este proyecto he utilizado bootstrap para aplicar estilos, y react para las funcionalidades. Consiste en utilizar los datos de la API SWAPI para extrar toda la información requerida y utilzarla en la aplicación web."
+            tecnologias: [iconoJs, iconoCss, iconoHtml, iconoReact, tailwind],
+            descripciondetallada: "En este proyecto he utilizado tailwindCSS para aplicar estilos, y react para las funcionalidades. Consiste en utilizar los datos de la API para extrar toda la información requerida y utilizarla."
         }
     ])
 
@@ -98,6 +99,7 @@ const Projects = ({ ProyectosSection }) => {
         const dataActualizada = data.map(proyect => proyect.id === proyecto.id ? proyecto : proyect)
         setData(dataActualizada)
     }
+
     const generarId = () => {
         const random = Math.random().toString(36).substring(2);
         const fecha = Date.now().toString(36)
@@ -107,7 +109,7 @@ const Projects = ({ ProyectosSection }) => {
     return (
         <section className='projects-container' ref={ProyectosSection}>
             <h2 className='head-text mb-5'>Mis proyectos</h2>
-            <div class="d-flex flex-wrap justify-content-center">
+            <div className="d-flex flex-wrap justify-content-center">
                 {data.map((proyecto, index) => {
                     const { id, image, title, github, demo, descripcion, inf, descripciondetallada, tecnologias } = proyecto
                     const idgenerate = generarId()
@@ -138,7 +140,7 @@ const Projects = ({ ProyectosSection }) => {
                                                 modificar(proyecto)
                                             }}
                                         >
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" className="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
                                                 <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1z" />
                                             </svg>
                                         </button>
@@ -158,7 +160,7 @@ const Projects = ({ ProyectosSection }) => {
                                             </svg>&nbsp;
                                             GitHub</a>
                                         <a href={demo} className='btn '>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-eye-fill" viewBox="0 0 16 16">
                                                 <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
                                                 <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
                                             </svg> &nbsp;
@@ -170,7 +172,7 @@ const Projects = ({ ProyectosSection }) => {
                                                     modificar(proyecto)
                                                 }}
                                             >
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-info-square-fill" viewBox="0 0 16 16">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" className="bi bi-info-square-fill" viewBox="0 0 16 16">
                                                     <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.93 4.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
                                                 </svg>
                                             </button>
