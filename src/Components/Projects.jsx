@@ -24,8 +24,8 @@ import tailwind from "../Media/tailwindlogo.svg"
 const Projects = ({ ProyectosSection }) => {
     const [data, setData] = useState([
         {
-            id: SporterImg,
-            image: S,
+            id: 0,
+            image: SporterImg,
             title: "Blog de Star Wars",
             descripcion: "Proyecto realizado con API SWAPI. Del cual obtengo y manejo los datos, con opción a guardar y eliminar elementos favoritos",
             github: "https://github.com/ManuelCebreiro/starwars",
