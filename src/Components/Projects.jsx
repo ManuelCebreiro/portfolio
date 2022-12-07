@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import "../Styles/Projects.css"
 // import StarWarsImg from "../Media/starwars.png"
+import StarwarsImg from "../Media/Starwars.png"
 import SporterImg from "../Media/Sporter.png"
 import GestionPacientesImg from "../Media/Gestionpacientes.png"
 import VeterinarioImg from "../Media/Veterinario.png"
@@ -25,7 +26,7 @@ const Projects = ({ ProyectosSection }) => {
     const [data, setData] = useState([
         {
             id: 0,
-            image: SporterImg,
+            image: StarwarsImg,
             title: "Blog de Star Wars",
             descripcion: "Proyecto realizado con API SWAPI. Del cual obtengo y manejo los datos, con opción a guardar y eliminar elementos favoritos",
             github: "https://github.com/ManuelCebreiro/starwars",
