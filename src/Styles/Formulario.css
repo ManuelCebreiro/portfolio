@@ -20,26 +20,6 @@
     margin-top: 1%;
 }
 
-@media screen and (max-width: 768px) {
-    .formulario {
-        width: 70%;
-        height: 64%;
-    }
-}
-
-@media screen and (max-width: 350px) {
-    .formulario {
-        width: 82%;
-        height: 64%;
-    }
-}
-
-@media screen and (max-width: 540px) {
-    .formulario {
-        width: 82%;
-        height: 64%;
-    }
-}
 
 @media screen and (max-width: 1024px) {
     .formulario {
@@ -48,6 +28,27 @@
     }
 }
 
+
+@media screen and (max-width: 912px) {
+    .formulario {
+        width: 66%;
+        height: 64%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .formulario {
+        width: 76%;
+        height: 64%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .formulario {
+        width: 90%;
+        height: 64%;
+    }
+}
 
 @media screen and (min-width: 1025px) {
     .formulario {
