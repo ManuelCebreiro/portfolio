@@ -2,26 +2,54 @@
     text-align: center;
     display: flex;
     justify-content: center;
-    border:none;
+    border: none;
     background: black;
     color: white;
     font-family: "Roboto", sans-serif;
     height: auto;
     align-items: center;
 }
-.footer-section > div >p{
+
+.footer-section>div>p {
     margin-top: 1%;
     margin-bottom: 0;
     font-family: "Roboto", sans-serif;
 
 }
-.footer-section > a{
+
+.footer-section>a {
     text-decoration: none;
     color: white;
 
 }
-.footer-section > a:hover{
+
+.footer-section>a:hover {
     text-decoration: none;
-    color: #DD2476 ;
+    color: #DD2476;
+
+}
+
+.textfooter {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    text-align: center;
+    display: flex;
+    justify-content: right;
+    padding-top: 0;
+    padding-right: 1%;
+    background: black;
+    color: white;
+}
+
+.textfooter:hover {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    text-align: center;
+    display: flex;
+    justify-content: right;
+    padding-top: 0;
+    padding-right: 1%;
+    background: black;
+    color: rgb(0, 132, 255);
 
 }

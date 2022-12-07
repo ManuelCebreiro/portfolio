@@ -10,6 +10,54 @@
     align-items: center;
 }
 
+/* =================================HOVER ICONS================ */
+:root {
+    --gradiente: linear-gradient(to left top, #23a6d5 10%, #23d5ab 90%) !important;
+}
+
+#iconLinkedin:hover {
+    text-decoration: none;
+    color: #0A66C2;
+    border: 2px solid black;
+    border-radius: 15%;
+    background-color: white;
+    transform: scale(1.3);
+}
+
+#iconGitHub:hover {
+    text-decoration: none;
+    color: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: black;
+    transform: scale(1.3);
+}
+
+
+#iconEmail {
+    text-decoration: none;
+    color: white;
+    border-radius: 15%;
+    /* width: 44px;
+    height: 40px; */
+    display: flex;
+    justify-content: center;
+}
+
+#iconEmail:hover {
+    text-decoration: none;
+    color: white;
+    border: 2px solid black;
+    border-radius: 15%;
+    background-color: rgb(201, 75, 75);
+    width: 36px;
+    height: 32px;
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
+
+/* =============================================== */
 
 @media screen and (min-width:1600px) {
     .about-container {

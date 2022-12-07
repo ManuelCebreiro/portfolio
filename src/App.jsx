@@ -13,14 +13,14 @@ function App() {
 
   const [scrollHeight, setScrollHeight] = useState(0);
 
-  const handleScroll = ()=>{
+  const handleScroll = () => {
     const position = window.scrollY;
     setScrollHeight(position);
   };
 
-  useEffect(()=>{
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-  },[scrollHeight])
+  }, [scrollHeight])
 
   const ContactoSection = useRef(null);
   const ProyectosSection = useRef(null);
@@ -35,25 +35,27 @@ function App() {
   };
   return (
     <div className="App">
-      <Navbar 
-      scrollHeight={scrollHeight}
-      ContactoSection={ContactoSection}
-      ProyectosSection={ProyectosSection}
-      AboutSection={AboutSection}
-      scrollDown={scrollDown}
+      <Navbar
+        scrollHeight={scrollHeight}
+        ContactoSection={ContactoSection}
+        ProyectosSection={ProyectosSection}
+        AboutSection={AboutSection}
+        scrollDown={scrollDown}
       />
-      <Cover/>
+      <Cover />
       <About
-      AboutSection={AboutSection}
+        AboutSection={AboutSection}
+        ContactoSection={ContactoSection}
+        scrollDown={scrollDown}
       />
-      <Slider/>
+      <Slider />
       <Projects
-      ProyectosSection={ProyectosSection}
+        ProyectosSection={ProyectosSection}
       />
       <Contacto
-      ContactoSection={ContactoSection}
+        ContactoSection={ContactoSection}
       />
-      <Footer/>
+      <Footer />
 
     </div>
   )

@@ -20,28 +20,36 @@
     margin-top: 1%;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .formulario {
         width: 70%;
         height: 64%;
     }
 }
 
-@media (max-width: 540px) {
+@media screen and (max-width: 350px) {
     .formulario {
         width: 82%;
         height: 64%;
     }
 }
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 540px) {
     .formulario {
-        width: 52%;
+        width: 82%;
         height: 64%;
     }
 }
 
-@media (min-width: 1025px) {
+@media screen and (max-width: 1024px) {
+    .formulario {
+        width: 82%;
+        height: 64%;
+    }
+}
+
+
+@media screen and (min-width: 1025px) {
     .formulario {
         width: 40%;
         height: 64%;
