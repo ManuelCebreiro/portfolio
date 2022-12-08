@@ -17,7 +17,7 @@ const Formulario = ({ ContactoSection }) => {
         <div className='contenedor' ref={ContactoSection} >
             <h2 className='head-text'>Contacto</h2>
             <div className='formulario'>
-                <div className='contenido'
+                <form className='contenido'
                     action="https://formsubmit.co/cebreirom@gmail.com"
                     method="POST">
                     <input className='inputstyle' type="text" name='name' placeholder='Nombre'></input>
@@ -27,7 +27,7 @@ const Formulario = ({ ContactoSection }) => {
                         onClick={() => mostrarAlerta()}
                         type="submit"
                         className='btnenviar'>Enviar</button>
-                </div>
+                </form>
             </div>
         </div>
     )
