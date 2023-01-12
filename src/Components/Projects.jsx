@@ -19,7 +19,7 @@ import iconoFlask from "../Media/flask.png"
 import iconoSql from "../Media/SQLAlchemy.png"
 import iconoJest from "../Media/jest.png"
 import tailwind from "../Media/tailwindlogo.svg"
-
+import guitarla from "../Media/guitarla.png"
 
 
 const Projects = ({ ProyectosSection }) => {
@@ -89,6 +89,17 @@ const Projects = ({ ProyectosSection }) => {
             inf: false,
             tecnologias: [iconoJs, iconoCss, iconoHtml, iconoReact, tailwind],
             descripciondetallada: "En este proyecto he utilizado tailwindCSS para aplicar estilos, y react para las funcionalidades. Consiste en utilizar los datos de la API para extrar toda la información requerida y utilizarla."
+        },
+        {
+            id: 6,
+            image: guitarla,
+            title: "Proyecto en Remix",
+            descripcion: "E-commerce de guitarras, con consulta a API creada con Strapi",
+            github: "https://github.com/ManuelCebreiro/GuitarLARemix",
+            demo: "https://guitar-la-remix-pfumqzene-manuelcebreiro.vercel.app/",
+            inf: false,
+            tecnologias: [iconoJs, iconoCss, iconoHtml, iconoReact],
+            descripciondetallada: "Se ha creado una pequeña base de datos en Stapi, para consultar las imagenes, precios y descripciones de los productos. La aplicacion web, dispone de apartado de blog, y tienda. Con carrito de compras."
         }
     ])
 
