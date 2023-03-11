@@ -1,8 +1,13 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "../Styles/Formulario.css"
 import swal from 'sweetalert'
 
+
 const Formulario = ({ ContactoSection }) => {
+
+    const [nombre, setNombre] = useState("");
+    const [email, setEmail] = useState("");
+    const [mensaje, setMensaje] = useState("");
 
     const mostrarAlerta = () => {
         swal({
@@ -12,6 +17,37 @@ const Formulario = ({ ContactoSection }) => {
             timer: "3000"
         })
     }
+    const mostrarError = (mensaje) => {
+        swal({
+            title: "Error",
+            text: mensaje,
+            icon: "error",
+            timer: "3000"
+        })
+    }
+
+    const validarFormulario = () => {
+        if (!nombre || !email || !mensaje) {
+            mostrarError("Por favor, completa todos los campos.");
+            return false;
+        }
+
+        const regex = /\S+@\S+\.\S+/;
+        if (!regex.test(email)) {
+            mostrarError("Por favor, ingresa un correo electrónico válido.");
+            return false;
+        }
+
+        return true;
+    }
+const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validarFormulario()) {
+        e.target.submit();
+        mostrarAlerta();
+    }
+}
+
 
     return (
         <div className='contenedor' ref={ContactoSection} >
@@ -20,11 +56,12 @@ const Formulario = ({ ContactoSection }) => {
                 <form className='contenido'
                     action="https://formsubmit.co/cebreirom@gmail.com"
                     method="POST">
-                    <input className='inputstyle' type="text" name='name' placeholder='Nombre'></input>
-                    <input className='inputstyle' type="text" name="email" placeholder='Email'></input>
-                    <textarea className='textareastyle' type="text" placeholder='Tu mensaje' name="message" required></textarea>
+                    <input className='inputstyle' type="text" name='name' placeholder='Nombre'onChange={(e) => setNombre(e.target.value)}
+></input>
+                    <input className='inputstyle' type="text" name="email" placeholder='Email'onChange={(e) => setEmail(e.target.value)}></input>
+                    <textarea className='textareastyle' type="text" placeholder='Tu mensaje' name="message" required onChange={(e) => setMensaje(e.target.value)}></textarea>
                     <button
-                        onClick={() => mostrarAlerta()}
+                        // onClick={() => mostrarAlerta()}
                         type="submit"
                         className='btnenviar'>Enviar</button>
                 </form>
